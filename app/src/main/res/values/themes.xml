@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Study" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowTranslucentNavigation" tools:ignore="NewApi">true</item>
+        <!--解决部分手机隐藏状态栏顶部出现小黑条的问题-->
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:ignore="NewApi">shortEdges</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.Study" parent="Base.Theme.Study" />
+</resources>

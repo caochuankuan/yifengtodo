@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ctype">
+
+        <item>请选择院系</item>
+        <item>电子信息系</item>
+        <item>纺织工程系</item>
+        <item>经济贸易系</item>
+        <item>艺术系</item>
+        <item>环境艺术系</item>
+        <item>服装系</item>
+        <item>商务英语</item>
+
+    </string-array>
+</resources>

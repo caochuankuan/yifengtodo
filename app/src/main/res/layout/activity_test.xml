@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen3"
+    tools:context=".UI.TestActivity">
+
+    <TextView
+        android:id="@+id/kaoshi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="aaa"
+        android:textSize="30sp"
+        android:textColor="#000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffe4c6"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:layout_below="@id/kaoshi">
+
+        <TextView
+            android:id="@+id/timu1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="bbb"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/question1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ccc"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"/>
+
+        <ListView
+            android:id="@+id/answer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e7f1db">
+
+        </ListView>
+
+        <EditText
+            android:id="@+id/zhuguan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="10"
+            android:visibility="gone"
+            android:hint="请输入"
+            android:text="我认为：">
+
+        </EditText>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/tijiao1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:text="提交"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#f9d000"/>
+
+</RelativeLayout>

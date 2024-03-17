@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <!--  banner_start  -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <FrameLayout
+            android:id="@+id/banner_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="这里是一行示例布局展示文字"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <!--  banner_start  -->
+
+    <TextView
+        android:id="@+id/emptytext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emptytext"
+        android:gravity="center"
+        android:text="遇见广告"
+        android:textColor="#2A62A0"
+        android:textSize="50sp"/>
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#f9f000"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/staff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="designed by：于逸风"
+        android:textColor="#2A62A0"
+        android:gravity="center"
+        android:layout_marginBottom="6dp"/>
+
+    <Button
+        android:id="@+id/center"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="进入软件"
+        android:textSize="20sp"
+        android:theme="@style/Widget.Material3.Button"
+        android:background="#f9f000"/>
+
+</RelativeLayout>

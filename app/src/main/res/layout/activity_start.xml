@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@android:id/tabhost"
+    android:background="@drawable/screen2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.StartActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="40dp"
+        android:padding="16dp"
+        android:layout_weight="1"
+        android:background="#ffffce">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="信息确认"
+            android:textColor="#000"
+            android:textSize="30sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/queren1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="姓名："
+            android:textSize="22sp"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/queren2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="学号："
+            android:textSize="22sp"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/queren3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="政治面貌："
+            android:textSize="22sp"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/queren4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="所属院系："
+            android:textSize="22sp"
+            android:textColor="#000"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/relogin"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"
+        android:text="重写信息"
+        android:textSize="20sp"
+        android:background="#f9d000"/>
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"
+        android:text="开始学习"
+        android:textSize="20sp"
+        android:background="#f9d000"/>
+
+</LinearLayout>
