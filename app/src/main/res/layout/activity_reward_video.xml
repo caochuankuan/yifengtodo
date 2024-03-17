@@ -33,31 +33,31 @@
     <!--        android:textColor="@android:color/black"-->
     <!--        android:textSize="14sp"/>-->
 
-    <Button
-        android:id="@+id/btn_reward_load_vertical"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:text="加载竖版激励视频广告"
-        android:textColor="@android:color/black"
-        android:textSize="14sp"/>
+<!--    <Button-->
+<!--        android:id="@+id/btn_reward_load_vertical"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="52dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginRight="8dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="加载竖版激励视频广告"-->
+<!--        android:textColor="@android:color/black"-->
+<!--        android:textSize="14sp"/>-->
 
-    <Button
-        android:id="@+id/btn_reward_show"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:text="展示激励视频广告"
-        android:textColor="@android:color/black"
-        android:textSize="14sp"/>
+<!--    <Button-->
+<!--        android:id="@+id/btn_reward_show"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="52dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginRight="8dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="展示激励视频广告"-->
+<!--        android:textColor="@android:color/black"-->
+<!--        android:textSize="14sp"/>-->
 
     <Button
         android:id="@+id/main"

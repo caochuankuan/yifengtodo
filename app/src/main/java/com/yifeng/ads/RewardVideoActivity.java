@@ -50,16 +50,9 @@ public class RewardVideoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reward_video);
 
-//        返回按钮
-//        findViewById(R.id.btn_arv_back).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
-//        mLoadAd = (Button) findViewById(R.id.btn_reward_load);
-        mLoadAdVertical = (Button) findViewById(R.id.btn_reward_load_vertical);
-        mShowAd = (Button) findViewById(R.id.btn_reward_show);
+
+//        mLoadAdVertical = (Button) findViewById(R.id.btn_reward_load_vertical);
+//        mShowAd = (Button) findViewById(R.id.btn_reward_show);
         main = findViewById(R.id.main);
 
         getExtraInfo();
@@ -70,6 +63,7 @@ public class RewardVideoActivity extends Activity {
 //        2.手动授权,我直接写Manitest里了，但是现在好像都需要手动授权了，这里我没写
 //        3.创建TTAdNative对象,用于调用广告请求接口
         mTTAdNative = TTAdSdk.getAdManager().createAdNative(this);
+        loadAd(mVerticalCodeId);
     }
 
     private void getExtraInfo() {
@@ -85,23 +79,38 @@ public class RewardVideoActivity extends Activity {
     }
 
     private void initClickEvent() {
-//        mLoadAd.setOnClickListener(new View.OnClickListener() {
+
+//        mLoadAdVertical.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //
-//                loadAd(mHorizontalCodeId);
+//                loadAd(mVerticalCodeId);
 //            }
 //        });
-        mLoadAdVertical.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        mShowAd.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                loadAd(mVerticalCodeId);
+//
+//                //当mIsLoaded标识为true 代表广告视频本地加载完整 可直接开启一个主线程处理showRewardVideoAd
+//                if (mttRewardVideoAd != null && mIsLoaded) {
+//                    //step6:在获取到广告后展示,强烈建议在onRewardVideoCached回调后，展示广告，提升播放体验
+//                    //该方法直接展示广告
+////                    mttRewardVideoAd.showRewardVideoAd(RewardVideoActivity.this);
+//
+//                    //展示广告，并传入广告展示的场景
+//                    mttRewardVideoAd.showRewardVideoAd(RewardVideoActivity.this, TTAdConstant.RitScenes.CUSTOMIZE_SCENES, "scenes_test");
+//                    mttRewardVideoAd = null;
+//                } else {
+//                    TToast.show(RewardVideoActivity.this, "请先加载广告");
+//                }
+//            }
+//        });
 
-                loadAd(mVerticalCodeId);
-            }
-        });
-        mShowAd.setOnClickListener(new View.OnClickListener() {
+        main.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
 
                 loadAd(mVerticalCodeId);
 
@@ -117,13 +126,7 @@ public class RewardVideoActivity extends Activity {
                 } else {
                     TToast.show(RewardVideoActivity.this, "请先加载广告");
                 }
-            }
-        });
 
-        main.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(RewardVideoActivity.this, LoginActivity.class));
             }
         });
 
@@ -201,18 +204,21 @@ public class RewardVideoActivity extends Activity {
                         if (isEnableAdvancedReward && mRewardAdvancedInfo != null) {
                             Log.d(TAG, "本次奖励共发放：" + mRewardAdvancedInfo.getRewardAdvancedAmount());
                         }
+                        startActivity(new Intent(RewardVideoActivity.this, LoginActivity.class));
                     }
                     //视频播放完成回调
                     @Override
                     public void onVideoComplete() {
                         Log.d(TAG, "Callback --> rewardVideoAd complete");
                         TToast.show(RewardVideoActivity.this, "rewardVideoAd complete");
+                        startActivity(new Intent(RewardVideoActivity.this, LoginActivity.class));
                     }
                     //视频广告播放错误回调
                     @Override
                     public void onVideoError() {
                         Log.e(TAG, "Callback --> rewardVideoAd error");
                         TToast.show(RewardVideoActivity.this, "rewardVideoAd error");
+                        startActivity(new Intent(RewardVideoActivity.this, LoginActivity.class));
                     }
 
                     //视频播放完成后，奖励验证回调，rewardVerify：是否有效，rewardAmount：奖励梳理，rewardName：奖励名称，code：错误码，msg：错误信息
@@ -222,6 +228,7 @@ public class RewardVideoActivity extends Activity {
                                 " name:" + rewardName + " errorCode:" + errorCode + " errorMsg:" + errorMsg;
                         Log.e(TAG, "Callback --> " + logString);
                         TToast.show(RewardVideoActivity.this, logString);
+                        startActivity(new Intent(RewardVideoActivity.this, LoginActivity.class));
                     }
 
                     @Override
