@@ -1509,7 +1509,7 @@ implementation 'com.pangle.cn:ads-sdk-pro:5.6.1.5'
 ```
 
 # 4.激励广告
-## 1.
+## 1.从官方sdkdemo里把RewardBundleModel.java和RewardAdvancedInfo.java复制到Utils里
 ![激励广告](https://github.com/caochuankuan/yifengtodo/blob/master/app/src/main/res/drawable/img.png "激励广告")
 ## 2.新建活动RewardVideoActivity
 java:
