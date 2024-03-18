@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //获取到声明中的权限，提高广告变现效率。记得禁止插屏和Banner广告的权限申请否则会重复。
-        TTAdManagerHolder.get().requestPermissionIfNecessary(MyApplication.getContext());
+        //TTAdManagerHolder.get().requestPermissionIfNecessary(MyApplication.getContext());
         //新插屏广告                    插屏广告代码位id
         InsertScreen.Inst().Init(this, "956462967", TTAdConstant.HORIZONTAL);
         //banner广告   banner广告代码位id
@@ -53,8 +53,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
         //获取到声明中的权限，提高广告变现效率。记得禁止插屏和Banner广告的权限申请否则会重复。
-        TTAdManagerHolder.get().requestPermissionIfNecessary(MyApplication.getContext());
+        //TTAdManagerHolder.get().requestPermissionIfNecessary(MyApplication.getContext());
         //新插屏广告                    插屏广告代码位id
         InsertScreen.Inst().Init(this, "956462967", TTAdConstant.HORIZONTAL);
     }
